@@ -1,0 +1,14 @@
+Site com as informações:
+    https://wiki.archlinux.org/index.php/NetworkManager
+
+Para verificar as redes disponíveis:
+    nmcli device wifi list
+
+Para conectar a uma rede:
+    nmcli device wifi connect SSID_or_BSSID password senha
+
+Para ver as redes que estão conectadas:
+    nmcli connection show
+
+Para desconectar:
+    nmcli device disconnect ifname eth0

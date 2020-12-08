@@ -1,0 +1,5 @@
+Pata iniciar executamos:
+    python install.py --clangd-completer
+
+dentro da pasta:
+   cd ~/.vim/bundle/youcompleteMe 

@@ -1,0 +1,15 @@
+Dentro da pasta:
+    /usr/share/applications/
+temos os programas que podemos setar
+
+Para verificar qual o app padrão
+usamos:
+    xdg-mime query filetype filename.ex
+e temos como resposta:
+    application/octet-stream
+
+Para setar um app:
+    sudo xdg-mime default okularApplication_pdf.desktop livro.pdf
+
+    tem que exister o livro.pdf
+

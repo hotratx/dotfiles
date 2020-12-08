@@ -1,0 +1,10 @@
+Foi criada a pasta: 
+    media/pendrive/
+
+para montar o pendrive. 
+
+Primeiro verificamos a partição que queremos montar, com o comando:
+    fdidk -l
+
+Pro fim, devemos montar com o comando:
+    sudo mount /dev/sdb ~/media/pendrive

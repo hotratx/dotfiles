@@ -1,0 +1,3 @@
+Para rodar:
+    spotifyd --no-daemon
+    spt
