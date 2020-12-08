@@ -1,0 +1,37 @@
+switch-to-view spectro
+config
+config /ui/theme
+q
+config /ui/theme eldar
+config /ui/theme monocai
+q
+format $
+config /ui/theme monocai
+config /ui/theme solarized-dark
+highlight INFO
+highlight BitfinexWss
+save-session teste
+q
+config /ui/theme solarized-dark
+help 
+q
+highlight recv0
+highlight BitfinexWss
+q
+highlight 102599
+q
+highlight CtimeHist
+highlight _dadoNew
+highlight Controle5m
+highlight Ctime
+highlight _dadoList
+highlight Apurando:
+highlight Consolidado:
+highlight Consolidado
+highlight Novo
+clear-highlight Ctime
+highlight Controle1
+highlight addData
+highlight dataSave
+help 
+q
