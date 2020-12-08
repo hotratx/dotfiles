@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/hotratx/Downloads/milky-way-1023340_1920.jpg' 
