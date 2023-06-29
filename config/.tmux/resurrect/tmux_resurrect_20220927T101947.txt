@@ -1,0 +1,13 @@
+pane	0	1	0	:	1	:/home/hotratx/wedev/wallet_bitgo	1	docker-compose	:docker-compose up
+pane	0	2	0	:	1	:/home/hotratx/wedev/wallet_bitgo	1	zsh	:
+pane	0	3	0	:	1	:/home/hotratx/wedev/wallet_bitgo	1	zsh	:
+pane	0	4	0	:-	1	:/home/hotratx/wedev/wallet_bitgo	1	zsh	:
+pane	0	9	1	:*	1	:/home/hotratx/wedev/wallet_bitgo	1	zsh	:
+pane	1	1	1	:*	1	:/home/hotratx	1	zsh	:
+window	0	1	:docker-compose	0	:	b87d,169x42,0,0,0	:
+window	0	2	:zsh	0	:	b87e,169x42,0,0,1	:
+window	0	3	:zsh	0	:	b87f,169x42,0,0,2	:
+window	0	4	:zsh	0	:-	b880,169x42,0,0,3	:
+window	0	9	:zsh	1	:*	b881,169x42,0,0,4	:
+window	1	1	:zsh	1	:*	b882,169x42,0,0,5	:
+state	0	1

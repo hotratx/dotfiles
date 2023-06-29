@@ -1,0 +1,17 @@
+pane	freela	1	1	:*	1	:/home/hotratx/dev/freela/app-dash/app-pdf	1	zsh	:
+pane	freela	2	0	:	1	:/home/hotratx/dev/freela/app-dash/app-pdf	1	zsh	:
+pane	freela	3	0	:-	1	:/home/hotratx/dev/freela/app-dash/app-pdf	1	zsh	:
+pane	spotify	1	1	:*	1	:/home/hotratx	1	zsh	:
+pane	wedev	1	0	:-	1	:/home/hotratx/wedev/bitso/broker_pluginpix	1	zsh	:
+pane	wedev	2	0	:	1	:/home/hotratx/wedev/bitso/broker_pluginpix	1	zsh	:
+pane	wedev	3	0	:	1	:/home/hotratx/wedev/bitso/broker_pluginpix	1	zsh	:
+pane	wedev	4	1	:*	1	:/home/hotratx	1	nvim	:nvim .tmux.conf
+window	freela	1	:docker	1	:*	b47e,180x61,0,0,1	off
+window	freela	2	:code	0	:	b482,180x61,0,0,5	off
+window	freela	3	:lazygit	0	:-	b483,180x61,0,0,6	off
+window	spotify	1	:spotify-tui	1	:*	b47f,180x61,0,0,2	off
+window	wedev	1	:docker	0	:-	b47d,180x61,0,0,0	off
+window	wedev	2	:code	0	:	b480,180x61,0,0,3	off
+window	wedev	3	:lazygit	0	:	b481,180x61,0,0,4	off
+window	wedev	4	:nvim	1	:*	5a6f,180x61,0,0,10	:
+state	wedev	spotify

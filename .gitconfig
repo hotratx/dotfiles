@@ -1,0 +1,8 @@
+[user]
+	email = mgviero@gmail.com
+	name = hotratx
+[core]
+	editor = nvim
+	excludesFile = .gitignore
+[alias]
+	hist = log --oneline --graph --decorate --all

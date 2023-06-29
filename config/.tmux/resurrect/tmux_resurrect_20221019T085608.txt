@@ -1,0 +1,11 @@
+pane	0	1	1	:*	1	:/home/hotratx/wedev/bitso/broker_pluginpix	1	zsh	:
+pane	0	2	0	:-	1	:/home/hotratx/wedev/bitso/broker_pluginpix	1	zsh	:
+pane	0	3	0	:	1	:/home/hotratx/wedev/bitso/broker_pluginpix	1	zsh	:
+pane	0	4	0	:	1	:/home/hotratx/wedev/bitso/broker_pluginpix	1	zsh	:
+pane	1	1	1	:*	1	:/home/hotratx	1	zsh	:
+window	0	1	:zsh	1	:*	b87e,169x42,0,0,1	:
+window	0	2	:zsh	0	:-	b87f,169x42,0,0,2	:
+window	0	3	:zsh	0	:	b880,169x42,0,0,3	:
+window	0	4	:zsh	0	:	b881,169x42,0,0,4	:
+window	1	1	:zsh	1	:*	b883,169x42,0,0,6	:
+state	0	1

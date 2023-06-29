@@ -1,0 +1,17 @@
+pane	freela	1	0	:	1	:/home/hotratx/dev/peabiru/arbitrage	1	python	:/home/hotratx/.local/share/pypoetry/venv/bin/python /home/hotratx/.local/bin/poetry shell
+pane	freela	2	0	:	1	:/home/hotratx/dev/peabiru/arbitrage	1	python	:/home/hotratx/.local/share/pypoetry/venv/bin/python /home/hotratx/.local/bin/poetry shell
+pane	freela	3	0	:-	1	:/home/hotratx/dev/peabiru/arbitrage	1	lazygit	:lazygit
+pane	freela	4	1	:*	1	:/home/hotratx/.ssh	1	zsh	:
+pane	spotify	1	1	:*	1	:/home/hotratx	1	spt	:spt
+pane	wedev	1	0	:	1	:/home/hotratx/wedev/focus/service_notas	1	zsh	:
+pane	wedev	2	1	:*	1	:/home/hotratx/wedev/focus/service_notas	1	zsh	:
+pane	wedev	3	0	:-	1	:/home/hotratx/wedev/focus/service_notas	1	lazygit	:lazygit
+window	freela	1	:docker	0	:	b47e,180x61,0,0,1	off
+window	freela	2	:python	0	:	b486,180x61,0,0,9	off
+window	freela	3	:lazygit	0	:-	b480,180x61,0,0,3	off
+window	freela	4	:[tmux]	1	:*	5a6f,180x61,0,0,10	:
+window	spotify	1	:spotify-tui	1	:*	b481,180x61,0,0,4	off
+window	wedev	1	:docker	0	:	b482,180x61,0,0,5	off
+window	wedev	2	:zsh	1	:*	5a73,180x61,0,0,14	:
+window	wedev	3	:lazygit	0	:-	b484,180x61,0,0,7	off
+state	wedev	spotify
