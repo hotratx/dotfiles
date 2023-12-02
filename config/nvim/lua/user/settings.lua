@@ -36,11 +36,10 @@ local options = {
   undofile = true,                         -- enable persistent undo
   updatetime = 300,                        -- faster completion (4000ms default)
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-
+  termguicolors = true,
 }
 
 
-vim.opt.termguicolors = true
 vim.g.mkdp_auto_start = 0
 vim.g.clipboard = 1
 -- vim.gloaded_clipboard_provider = 1
@@ -62,7 +61,6 @@ vim.cmd [[set cursorline]]
 vim.cmd [[highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40]]
 vim.cmd [[set shell=zsh]]
 -- vim.wo.colorcolumn = '80'
-
 
 vim.opt.shortmess:append "c"
 

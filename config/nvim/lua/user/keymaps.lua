@@ -152,10 +152,25 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true, nowait = true }
 )
 
-
 -- Split window
 keymap("n", "<leader>s", "<cmd>split<Return><C-w>w", opts)
 keymap("n", "<leader>v", "<cmd>vsplit<Return><C-w>w", opts)
 
+-- Navegation buffers
+keymap("n", "<leader>,", ":bp<cr>", opts)
+keymap("n", "<leader>.", ":bn<cr>", opts)
+
+-- Copy last record
+keymap("n", "<leader>p", '"0p', opts)
+keymap("n", "<leader>P", '"0P', opts)
+
+-- Copy and recort selection to Xorg transfer area
+keymap("n", "<leader>yy", '"+y', opts)
+keymap("n", "<leader>dd", '"+c', opts)
+
 -- Select all
 keymap("n", "<C-a>", "gg<S-v>G", opts)
+
+-- Spells
+keymap("", "<F2>", ":setlocal spell! spelllang=pt_br<cr>", opts)
+keymap("", "<F3>", ":setlocal spell! spelllang=en<cr>", opts)
