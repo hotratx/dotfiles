@@ -122,7 +122,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 source ~/.local/share/icons-in-terminal/icons_bash.sh
-source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -153,3 +152,4 @@ source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+# source /home/hotratx/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

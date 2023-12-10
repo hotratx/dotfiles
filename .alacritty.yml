@@ -31,6 +31,8 @@ window:
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
+
+  opacity: 0.8
   padding:
     x: 6
     y: 6
@@ -194,7 +196,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  #use_thin_strokes: true
+use_thin_strokes: true
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
