@@ -16,3 +16,7 @@ end, {remap=true})
 vim.keymap.set('', 'T', function()
   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
 end, {remap=true})
+
+
+vim.api.nvim_set_keymap("", "s", ":HopChar2<cr>", { silent = true })
+vim.api.nvim_set_keymap("", "S", ":HopWord<cr>", { silent = true })
