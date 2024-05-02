@@ -16,6 +16,7 @@ set -o vi
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias dormir='systemctl suspend'
 alias dcu='docker-compose up'
 alias dcd='docker-compose down'
 alias ls='ls --color=auto'
@@ -32,6 +33,7 @@ alias exa='exa -l --icons'
 
 export PATH=~/.local/bin:$PATH
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$PATH:/home/hotratx/.cargo/bin"
 export PYTHONPATH=$PYTHONPATH:~/dev/:~/wedev/:~/code/
 
 export NVM_DIR="$HOME/.nvm"
@@ -127,7 +129,7 @@ source ~/.local/share/icons-in-terminal/icons_bash.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -153,3 +155,9 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 # source /home/hotratx/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
