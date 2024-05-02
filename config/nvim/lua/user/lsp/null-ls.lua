@@ -19,7 +19,8 @@ null_ls.setup({
      formatting.prettier.with({
         filetypes = { "html", "json", "yaml", "markdown", "py" },
     }),
-    diagnostics.flake8,    -- formatting.prettier.with {
+    -- diagnostics.flake8,    -- formatting.prettier.with {
+    formatting.ruff,
     formatting.black,
     formatting.isort,
     -- null_ls.builtins.formatting.black

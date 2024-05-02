@@ -63,3 +63,12 @@ require("lspconfig").pyright.setup {
     },
   },
 }
+
+require('lspconfig').ruff_lsp.setup {
+  on_attach = require("user.lsp.handlers").on_attach,
+  capabilities = require("user.lsp.handlers").capabilities,
+  settings = {
+    -- Any extra CLI arguments for `ruff` go here.
+    args = {},
+  }
+}

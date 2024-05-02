@@ -125,7 +125,18 @@ return packer.startup(function(use)
 
   -- Git diff in the sign column
   use "lewis6991/gitsigns.nvim"
-  use "pwntester/octo.nvim"
+  -- use {
+  --   'pwntester/octo.nvim',
+  --   requires = {
+  --     'nvim-lua/plenary.nvim',
+  --     'nvim-telescope/telescope.nvim',
+  --     -- OR 'ibhagwan/fzf-lua',
+  --     'nvim-tree/nvim-web-devicons',
+  --   },
+  --   config = function ()
+  --     require"octo".setup()
+  --   end
+  -- }
   -- use 'tpope/vim-fugitive'
   -- use 'airblade/vim-gitgutter'
 
@@ -192,4 +203,19 @@ return packer.startup(function(use)
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
   end}
+
+  -- jupyter
+  use {
+    "kiyoon/jupynium.nvim",
+    build = "pip3 install --user .",
+    -- build = "conda run --no-capture-output -n jupynium pip install .",
+    -- enabled = vim.fn.isdirectory(vim.fn.expand "~/miniconda3/envs/jupynium"),
+  }
+
+  use "rcarriga/nvim-notify"   -- optional
+  use "stevearc/dressing.nvim" -- optional, UI for :JupyniumKernelSelect
+
+  -- ipython 
+  use {'Vigemus/iron.nvim'}
+
 end)
