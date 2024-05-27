@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/hotratx/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?.lua;/home/hotratx/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?/init.lua;/home/hotratx/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?.lua;/home/hotratx/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/hotratx/.cache/nvim/packer_hererocks/2.1.1710088188/lib/lua/5.1/?.so"
+local package_path_str = "/home/hotratx/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?.lua;/home/hotratx/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?/init.lua;/home/hotratx/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?.lua;/home/hotratx/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/hotratx/.cache/nvim/packer_hererocks/2.1.1713773202/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -299,15 +299,16 @@ _G.packer_plugins = {
     path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["ranger.nvim"] = {
+    config = { "\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0+\2\2\0B\0\2\1K\0\1\0\topen\16ranger-nvim\frequire½\1\1\0\a\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0003\6\v\0=\6\f\5B\0\5\1K\0\1\0\rcallback\0\1\0\2\fnoremap\2\rcallback\0\5\15<leader>ef\6n\20nvim_set_keymap\bapi\bvim\1\0\1\18replace_netrw\2\nsetup\16ranger-nvim\frequire\0" },
+    loaded = true,
+    path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/ranger.nvim",
+    url = "https://github.com/kelly-lin/ranger.nvim"
+  },
   ["renamer.nvim"] = {
     loaded = true,
     path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/renamer.nvim",
     url = "https://github.com/filipdutescu/renamer.nvim"
-  },
-  rnvimr = {
-    loaded = true,
-    path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/rnvimr",
-    url = "https://github.com/kevinhwang91/rnvimr"
   },
   sonokai = {
     loaded = true,
@@ -405,6 +406,10 @@ time([[Config for hop.nvim]], false)
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
+-- Config for: ranger.nvim
+time([[Config for ranger.nvim]], true)
+try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0+\2\2\0B\0\2\1K\0\1\0\topen\16ranger-nvim\frequire½\1\1\0\a\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0003\6\v\0=\6\f\5B\0\5\1K\0\1\0\rcallback\0\1\0\2\fnoremap\2\rcallback\0\5\15<leader>ef\6n\20nvim_set_keymap\bapi\bvim\1\0\1\18replace_netrw\2\nsetup\16ranger-nvim\frequire\0", "config", "ranger.nvim")
+time([[Config for ranger.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd copilot.lua ]]

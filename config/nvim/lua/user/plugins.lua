@@ -189,7 +189,19 @@ return packer.startup(function(use)
   use 'xuhdev/vim-latex-live-preview'
 
   -- Ranger in neovim
-  use 'kevinhwang91/rnvimr'
+  -- use 'kevinhwang91/rnvimr'
+  use {
+    "kelly-lin/ranger.nvim",
+    config = function()
+      require("ranger-nvim").setup({ replace_netrw = true })
+      vim.api.nvim_set_keymap("n", "<leader>ef", "", {
+        noremap = true,
+        callback = function()
+          require("ranger-nvim").open(true)
+        end,
+      })
+    end,
+  }
 
   -- Theme Startify
   use {
