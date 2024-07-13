@@ -108,6 +108,9 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-nvim-lua'
 
+  -- Color 
+  use 'brenoprata10/nvim-highlight-colors'
+
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use({

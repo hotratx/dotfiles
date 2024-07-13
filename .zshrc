@@ -16,6 +16,7 @@ set -o vi
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias tchau='poweroff'
 alias dormir='systemctl suspend'
 alias dcu='docker-compose up'
 alias dcd='docker-compose down'
