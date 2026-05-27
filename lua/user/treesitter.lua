@@ -3,16 +3,21 @@ if not status_ok then
 	return
 end
 
+local parser_dir = vim.fn.stdpath("data") .. "/site/parser"
+vim.opt.runtimepath:append(parser_dir)
+
 configs.setup({
+	parser_install_dir = parser_dir,
 	ensure_installed =  { "python", "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" }, -- one of "all" or a list of languages
 	sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
+	auto_install = true,
 	ignore_install = { "" }, -- List of parsers to ignore installing
 	highlight = {
     -- use_languagetree = true,
 		enable = true, -- false will disable the whole extension
 		-- disable = { "css", "html" }, -- list of language that will be disabled
 		-- disable = { "css", "markdown" }, -- list of language that will be disabled
-		additional_vim_regex_highlighting = true,
+		additional_vim_regex_highlighting = false,
 	},
 	autopairs = {
 		enable = true,
