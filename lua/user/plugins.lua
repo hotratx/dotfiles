@@ -25,7 +25,12 @@ require("lazy").setup({
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 
   -- Treesitter
-  { "nvim-treesitter/nvim-treesitter", lazy = false, build = ":TSUpdate" },
+  { 
+    "nvim-treesitter/nvim-treesitter",
+    branch = "master",
+    lazy = false,
+    build = ":TSUpdate",
+  },
   -- use 'p00f/nvim-ts-rainbow'
 
 
@@ -96,14 +101,14 @@ require("lazy").setup({
   -- use 'airblade/vim-gitgutter'
 
   -- Motion
-  {
-    'smoka7/hop.nvim',
-    tag = '*', -- optional but strongly recommended
-    config = function()
-      -- you can configure Hop the way you like here; see :h hop-config
-      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-    end
-  },
+  -- {
+  --   'smoka7/hop.nvim',
+  --   tag = '*', -- optional but strongly recommended
+  --   config = function()
+  --     -- you can configure Hop the way you like here; see :h hop-config
+  --     require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+  --   end
+  -- },
 
   -- emmet expand html
   "mattn/emmet-vim",
@@ -175,9 +180,12 @@ require("lazy").setup({
   },
 
   -- Terminal
-  {"akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
-  end},
+  {
+    "akinsho/toggleterm.nvim",
+    config = function()
+      require("toggleterm").setup()
+    end,
+  },
 
   -- jupyter
   {
