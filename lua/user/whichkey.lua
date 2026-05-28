@@ -234,7 +234,6 @@ local mappings = {
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   ["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Rename" },
   ["z"] = { "<cmd>ZenMode<cr>", "Zen" },
-  ["gy"] = "Link",
 
   p = {
     name = "Plugins",
@@ -355,6 +354,18 @@ local mappings = {
     },
   },
 
+  o = {
+    name = "OpenCode",
+    a = { "<cmd>lua require('opencode').ask('@this: ', { submit = true })<cr>", "Ask" },
+    s = { "<cmd>lua require('opencode').select()<cr>", "Select" },
+    t = { "<cmd>lua require('opencode').toggle()<cr>", "Toggle" },
+    u = { "<cmd>lua require('opencode').command('session.half.page.up')<cr>", "Scroll Up" },
+    d = { "<cmd>lua require('opencode').command('session.half.page.down')<cr>", "Scroll Down" },
+    n = { "<cmd>lua require('opencode').command('session.new')<cr>", "New Session" },
+    c = { "<cmd>lua require('opencode').command('session.compact')<cr>", "Compact Session" },
+    i = { "<cmd>lua require('opencode').command('session.interrupt')<cr>", "Interrupt" },
+  },
+
   s = {
     name = "Surround",
     ["."] = { "<cmd>lua require('surround').repeat_last()<cr>", "Repeat" },
@@ -416,7 +427,7 @@ local vmappings = {
   s = { "<esc><cmd>'<,'>SnipRun<cr>", "Run range" },
 }
 
--- which_key.setup(setup)
+which_key.setup(defaults)
 which_key.register(mappings, opts)
 which_key.register(vmappings, vopts)
 which_key.register(m_mappings, m_opts)

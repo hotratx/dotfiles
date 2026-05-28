@@ -235,7 +235,6 @@ require("lazy").setup({
     }
   },
 
-  -- avante
   -- Required plugins
   "MunifTanjim/nui.nvim",
   "MeanderingProgrammer/render-markdown.nvim",
@@ -245,17 +244,60 @@ require("lazy").setup({
   "zbirenbaum/copilot.lua",
   "folke/snacks.nvim",
 
-  -- Avante.nvim with build process
-  -- use {
-  --   'yetone/avante.nvim',
-  --   branch = 'main',
-  --   run = "make BUILD_FROM_SOURCE=true",
-  -- i}
+  -- Opencode
+  {
+    "nickjvandyke/opencode.nvim",
+    version = "*", -- Latest stable release
+    dependencies = {
+      {
+        -- `snacks.nvim` integration is recommended, but optional
+        ---@module "snacks" <- Loads `snacks.nvim` types for configuration intellisense
+        "folke/snacks.nvim",
+        optional = true,
+        opts = {
+          input = {}, -- Enhances `ask()`
+          picker = { -- Enhances `select()`
+            actions = {
+              opencode_send = function(...) return require("opencode").snacks_picker_send(...) end,
+            },
+            win = {
+              input = {
+                keys = {
+                  ["<a-a>"] = { "opencode_send", mode = { "n", "i" } },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    config = function()
+      ---@type opencode.Opts
+      vim.g.opencode_opts = {
+        -- Your configuration, if any; goto definition on the type or field for details
+      }
 
+      vim.o.autoread = true -- Required for `opts.events.reload`
 
+      -- Leader-based mappings to avoid conflicts with existing keymaps
+      vim.keymap.set({ "n", "x" }, "<leader>oa", function() require("opencode").ask("@this: ", { submit = true }) end, { desc = "OpenCode Ask" })
+      vim.keymap.set({ "n", "x" }, "<leader>os", function() require("opencode").select() end, { desc = "OpenCode Select" })
+      vim.keymap.set({ "n", "t" }, "<leader>ot", function() require("opencode").toggle() end, { desc = "OpenCode Toggle" })
+      vim.keymap.set({ "n", "x" }, "<leader>or", function() return require("opencode").operator("@this ") end, { desc = "OpenCode Add Range", expr = true })
+      vim.keymap.set("n", "<leader>ol", function() return require("opencode").operator("@this ") .. "_" end, { desc = "OpenCode Add Line", expr = true })
+      vim.keymap.set("n", "<leader>ou", function() require("opencode").command("session.half.page.up") end, { desc = "OpenCode Scroll Up" })
+      vim.keymap.set("n", "<leader>od", function() require("opencode").command("session.half.page.down") end, { desc = "OpenCode Scroll Down" })
+    end,
+  },
+
+  -- Avante
   {
     "yetone/avante.nvim",
+    build = vim.fn.has("win32") ~= 0
+      and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource true"
+      or "make BUILD_FROM_SOURCE=true",
     event = "VeryLazy",
+    version = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
