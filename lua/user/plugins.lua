@@ -101,6 +101,13 @@ require("lazy").setup({
   -- use 'airblade/vim-gitgutter'
 
   -- Motion
+  {
+      'smoka7/hop.nvim',
+      version = "*",
+      opts = {
+          keys = 'etovxqpdygfblzhckisuran'
+      }
+  },
   -- {
   --   'smoka7/hop.nvim',
   --   tag = '*', -- optional but strongly recommended
