@@ -27,7 +27,7 @@ require("lazy").setup({
   -- Treesitter
   { 
     "nvim-treesitter/nvim-treesitter",
-    branch = "master",
+    branch = "main",
     lazy = false,
     build = ":TSUpdate",
   },
@@ -74,6 +74,33 @@ require("lazy").setup({
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   { "catppuccin/nvim", name = "catppuccin" },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "storm", -- storm, moon, night, day
+      transparent = true,
+      terminal_colors = true,
+    },
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd.colorscheme("tokyonight")
+    end,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      theme = "wave", -- wave, dragon, lotus
+    },
+    config = function(_, opts)
+      require("kanagawa").setup(opts)
+      vim.cmd.colorscheme("kanagawa")
+    end,
+  },
   { "projekt0n/github-nvim-theme", lazy = true },
   { "rafamadriz/neon", lazy = true },
   { "sainnhe/sonokai", lazy = true },
@@ -133,10 +160,10 @@ require("lazy").setup({
   -- })
 
   {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
-    ft = { "markdown" },
-    build = "cd app && npm install",
+      "iamcco/markdown-preview.nvim",
+      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+      ft = { "markdown" },
+      build = function() vim.fn["mkdp#util#install"]() end,
   },
 
   -- Snippets
@@ -298,30 +325,30 @@ require("lazy").setup({
   },
 
   -- Avante
-  {
-    "yetone/avante.nvim",
-    build = vim.fn.has("win32") ~= 0
-      and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource true"
-      or "make BUILD_FROM_SOURCE=true",
-    event = "VeryLazy",
-    version = false,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "stevearc/dressing.nvim",
-    },
-    opts = {
-      provider = "openai",
-      providers = {
-        openai = {
-          model = "gpt-5-nano",
-          extra_request_body = {
-            temperature = 0.7,
-          },
-        },
-      },
-    },
-  },
+  -- {
+  --   "yetone/avante.nvim",
+  --   build = vim.fn.has("win32") ~= 0
+  --     and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource true"
+  --     or "make BUILD_FROM_SOURCE=true",
+  --   event = "VeryLazy",
+  --   version = false,
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "MunifTanjim/nui.nvim",
+  --     "stevearc/dressing.nvim",
+  --   },
+  --   opts = {
+  --     provider = "openai",
+  --     providers = {
+  --       openai = {
+  --         model = "gpt-5-nano",
+  --         extra_request_body = {
+  --           temperature = 0.7,
+  --         },
+  --       },
+  --     },
+  --   },
+  -- },
 
   {
     "stevearc/conform.nvim",
