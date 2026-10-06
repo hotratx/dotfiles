@@ -1,0 +1,27 @@
+.markdown-body {
+  max-width: 1280px !important;
+  width: min(1280px, calc(100vw - 96px)) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+.markdown-body pre {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+}
+
+.markdown-body table {
+  display: block;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+}
+
+@media (max-width: 768px) {
+  .markdown-body {
+    width: calc(100vw - 32px) !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
